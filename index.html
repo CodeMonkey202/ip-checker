@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Getting Clients IP Address using JavaScript(JQuery)
+	</title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+			display: flex;
+			align-content: center;
+			justify-items: center;
+			align-items: center;
+			height: 100vh;
+			justify-content: center;
+			background: purple;
+			color: white;
+			font-family: monospace;
+		}
+		h1{
+			font-size: 2.9em;
+		}
+	</style>
+
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+
+	<script>
+		
+
+		// we use the api from the first script above
+
+		$(document).ready(()=>{
+			$.getJSON("https://api.ipify.org?format=json",
+			          function (data){
+				//load that data into the screen using an ID
+				$("#gfg").html(data.ip);
+			})
+		});
+
+	</script>
+</head>
+
+<body>
+	<center>
+		<h1>
+			Your IP Address
+		</h1>
+		<h3>
+			IP ADDRESS IS
+		</h3>
+		<p id="gfg"></p>
+
+	</center>
+</body>
+
+</html>
